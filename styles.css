@@ -144,14 +144,50 @@ main{  background-color: #000000; }
         padding: 10px;
     }
 }
-footer {
-    position:flex;
+/* Footer styles */
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 28px 20px;
+    background: linear-gradient(180deg, #03040a 0%, #07121a 100%);
+    color: #dfe7f2;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 15px;
-    text-align: center;
-    display: block;
-    padding-top: 200px;;
-    background-color: rgb(0, 0, 0);
-    color: rgba(161, 170, 200, 0);
-    bottom: 0;
+}
+
+.site-footer .socials {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-footer .social-icon{
+    border-radius: 10px;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(120%);
+    transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+.site-footer .social-icon:hover{
+    transform: translateY(-4px) scale(1.06);
+    filter: none;
+}
+
+.site-footer .copyright p{
+    margin: 0;
+    color: #9fb0c8;
+    opacity: 0.9;
+}
+
+@media (max-width: 520px) {
+    .site-footer {
+        padding: 22px 12px;
+    }
+    .site-footer .social-icon{ width: 30px; height:30px }
 }
